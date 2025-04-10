@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 01</title>
+    <title>Exemplo 02</title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 01</h1>
+    <h1>PHP com POO - Exemplo 02</h1>
     <hr>
-
 
 <?php
 // Carregando/importando a classe
 require_once "src/Cliente.php";
 
+// Criando objeto/instância da classe
 $clienteA = new Cliente();
 $clienteB = new Cliente();
 
@@ -26,7 +26,7 @@ $clienteB->idade = 20;
 $clienteB->email = "nishimura@gmail.com";
 
 ?>
-    <h2>Acessando/lendo os dados dos objetoss</h2>
+    <h2>Acessando/lendo os dados dos objetos</h2>
     <h3>Cliente A</h3>
     <div>
         <?php
