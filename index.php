@@ -17,12 +17,11 @@ $clienteB = new Cliente();
 
 $clienteA->setNome("Sunoo");
 $clienteA->setIdade(21);
-$clienteA->setEmail("ddeonu@cute.com");
+$clienteA->setEmail("ddeonu@gmail.com");
 
 $clienteB->setNome("Ri-ki");
 $clienteB->setIdade(20);
 $clienteB->setEmail("nishimura@gmail.com");
-
 ?>
     <h2>Acessando/lendo os dados dos objetos</h2>
     
