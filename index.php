@@ -10,40 +10,28 @@
     <hr>
 
 <?php
-// Carregando/importando a classe
 require_once "src/Cliente.php";
 
-// Criando objeto/instância da classe
 $clienteA = new Cliente();
 $clienteB = new Cliente();
 
-$clienteA->nome = "Sunoo";
-$clienteA->idade = 21;
-$clienteA->email = "ddeonu@cute.com";
+$clienteA->setNome("Sunoo");
+$clienteA->setIdade(21);
+$clienteA->setEmail("ddeonu@cute.com");
 
-$clienteB->nome = "Ri-ki";
-$clienteB->idade = 20;
-$clienteB->email = "nishimura@gmail.com";
+$clienteB->setNome("Ri-ki");
+$clienteB->setIdade(20);
+$clienteB->setEmail("nishimura@gmail.com");
 
 ?>
     <h2>Acessando/lendo os dados dos objetos</h2>
-    <h3>Cliente A</h3>
-    <div>
-        <?php
-        $clienteA->exibirDados();
-        ?>
-    </div>
+    
     <ul>
         <li><b>Idade: </b><?=$clienteA->idade?></li>
         <li><b>Email: </b><?=$clienteA->email?></li>
     </ul>
 
-    <h3>Cliente B</h3>
-    <div>
-        <?php
-        $clienteB->exibirDados();
-        ?>
-    </div>
+    
     <ul>
         <li><b>Idade: </b><?=$clienteB->idade?></li>
         <li><b>Email: </b><?=$clienteB->email?></li>
