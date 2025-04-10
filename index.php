@@ -27,14 +27,16 @@ $clienteB->setEmail("nishimura@gmail.com");
     <h2>Acessando/lendo os dados dos objetos</h2>
     
     <ul>
-        <li><b>Idade: </b><?=$clienteA->idade?></li>
-        <li><b>Email: </b><?=$clienteA->email?></li>
+        <li><b>Nome: </b><?=$clienteA->getNome()?></li>
+        <li><b>Idade: </b><?=$clienteA->getIdade()?></li>
+        <li><b>Email: </b><?=$clienteA->getEmail()?></li>
     </ul>
 
     
     <ul>
-        <li><b>Idade: </b><?=$clienteB->idade?></li>
-        <li><b>Email: </b><?=$clienteB->email?></li>
+        <li><b>Nome: </b><?=$clienteB->getNome()?></li>
+        <li><b>Idade: </b><?=$clienteB->getIdade()?></li>
+        <li><b>Email: </b><?=$clienteB->getEmail()?></li>
     </ul>
 
     <h2>Testes de acesso aos recursos da classe através do objeto</h2>
