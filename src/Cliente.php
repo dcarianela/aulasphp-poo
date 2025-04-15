@@ -15,20 +15,18 @@ class Cliente
     }
 
     public function verificarIdade(): string {
-        if( $this->idade < 18 ){
-            return "menor de idade";
-        } elseif ( $this->idade < 60 ){
-            return "adulto";
-        } else {
-            return "idoso";
-        }
+        if( $this->idade < 18 ) return "menor de idade";
+        
+        if ( $this->idade < 60 ) return "adulto";
+        
+        return "idoso";
     }
-
+    
     public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
-
+    
     public function setIdade(int $idade): void
     {
         if($idade < 0){
@@ -36,7 +34,7 @@ class Cliente
         }
         $this->idade = $idade;
     }
-
+    
     public function setEmail(string $email): void
     {
         if( !filter_var($email, FILTER_VALIDATE_EMAIL) ){
@@ -50,15 +48,16 @@ class Cliente
     {
         return $this->nome;
     }
-
+    
     public function getIdade(): int
     {
         return $this->idade;
     }
-
+    
     public function getEmail(): string
     {
         return $this->email;
     }
-
+    
 }
+
