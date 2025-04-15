@@ -6,7 +6,24 @@ class Cliente
     private int $idade;
     private string $email;
 
-    /* Métodos setters: responsável por receber/atribuir dados para as propriedades/atributos */
+    // Método Construtor (sempre é executado automaticamente ao criar objeto)
+    public function __construct(string $nome, int $idade, string $email)
+    {
+        $this->setNome($nome);
+        $this->setIdade($idade);
+        $this->setEmail($email);
+    }
+
+    public function verificarIdade(): string {
+        if( $this->idade < 18 ){
+            return "menor de idade";
+        } elseif ( $this->idade < 60 ){
+            return "adulto";
+        } else {
+            return "idoso";
+        }
+    }
+
     public function setNome(string $nome): void
     {
         $this->nome = $nome;
@@ -22,7 +39,7 @@ class Cliente
 
     public function setEmail(string $email): void
     {
-        if( filter_var($email, FILTER_VALIDATE_EMAIL) ){
+        if( !filter_var($email, FILTER_VALIDATE_EMAIL) ){
             throw new InvalidArgumentException("E-mail inválido!");
         }
         $this->email = $email;
