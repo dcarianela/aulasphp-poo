@@ -10,11 +10,16 @@
     <hr>
 
 <?php
-require_once "src/Cliente.php";
+require_once "src/Cliente.php"; // Superclasse
+require_once "src/PessoaFisica.php"; // Subclasse
+
+$clientePF = new PessoaFisica("Sunoo", "ddeonu@cute.com", 21, "571.931.358-30");
+
 
 
 ?>
 
+<pre><?=var_dump($clientePF)?></pre>
     
 </body>
 </html>
