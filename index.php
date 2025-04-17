@@ -17,12 +17,14 @@ require_once "src/Models/PessoaJuridica.php"; // Subclasse
 
 $clientePF = new PessoaFisica("Sunoo", "ddeonu@cute.com", 21, "571.931.358-30");
 $clientePJ = new PessoaJuridica("Taehyun", "terry@kwai.com", "32.789.5555/000-1", 2019, "Pretty Eyes Corp.")
-
-
 ?>
+    <h2>Relatórios</h2>
 
-<pre><?=var_dump($clientePF, $clientePJ)?></pre>
+    <h3>PF</h3>
+    <?=$clientePF->relatorio()?>
 
+    <h3>PJ</h3>
+    <?=$clientePJ->relatorio()?>
     
 </body>
 </html>
