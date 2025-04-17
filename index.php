@@ -10,10 +10,10 @@
     <hr>
 
 <?php
-require_once "src/Situacao.php"; // Enum
-require_once "src/Cliente.php"; // Superclasse
-require_once "src/PessoaFisica.php"; // Subclasse
-require_once "src/PessoaJuridica.php"; // Subclasse
+require_once "src/Enums/Situacao.php"; // Enum
+require_once "src/Models/Cliente.php"; // Superclasse
+require_once "src/Models/PessoaFisica.php"; // Subclasse
+require_once "src/Models/PessoaJuridica.php"; // Subclasse
 
 $clientePF = new PessoaFisica("Sunoo", "ddeonu@cute.com", 21, "571.931.358-30");
 $clientePJ = new PessoaJuridica("Taehyun", "terry@kwai.com", "32.789.5555/000-1", 2019, "Pretty Eyes Corp.")
