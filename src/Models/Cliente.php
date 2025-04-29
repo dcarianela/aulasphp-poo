@@ -1,4 +1,11 @@
 <?php
+namespace MeuProjeto\Models;
+
+// Usamos o 'use' para indicar a utilização de outras classes/enums que temos
+use MeuProjeto\Enums\Situacao;
+
+// Usamos o 'use' também para indicar a utilização de classes internas do PHP
+use InvalidArgumentException;
 
 class Cliente
 {
@@ -6,10 +13,8 @@ class Cliente
     private string $email;
     private Situacao $situacao;
 
-    // Método Construtor (sempre é executado automaticamente ao criar objeto)
     public function __construct(
         string $nome, string $email, Situacao $situacao = Situacao::INATIVO
-        /* Definindo a situação INATIVO como valor padrão para o parâmetro situacao no construtor */
         )
     {
         $this->setNome($nome);
@@ -24,9 +29,6 @@ class Cliente
         </div>";
     }
     
-    /* Visibilidade protegida: desta forma, este método
-    pode ser usado aqui em Cliente (superclasse) e também nas subclasses.
-    O acesso externo (no nosso caso, em index) continua sendo bloqueado. */
     protected function setSituacao(Situacao $situacao):void {
         $this->situacao = $situacao;
     }
@@ -48,7 +50,6 @@ class Cliente
         $this->email = $email;
     }
     
-    /* Métodos getters: responsáveis por acessar/ler os dados */
     public function getNome(): string
     {
         return $this->nome;

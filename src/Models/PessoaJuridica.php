@@ -1,4 +1,8 @@
 <?php
+namespace MeuProjeto\Models;
+
+use MeuProjeto\Enums\Situacao;
+
 class PessoaJuridica extends Cliente {
     private string $cnpj;
     private int $anoFundacao;
@@ -13,14 +17,9 @@ class PessoaJuridica extends Cliente {
         $this->setAnoFundacao($ano);
         $this->setNomeFantasia($nomeFantasia);
 
-        /* Como o método foi definido na superclasse como protected,
-        agora é possível usá-lo para mudar a situação de PJ. */
         $this->setSituacao(Situacao::PENDENTE);
     }
 
-    /* Método polimórfico, ou seja, ele sobreescreve
-    o método originalmente criado na Superclasse.
-    Atenção: os métodos devem ter a mesma assinatura (nome, parâmetros e retorno) */
     public function relatorio():string {
         return "<div>"
             . parent::relatorio() .

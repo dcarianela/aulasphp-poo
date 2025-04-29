@@ -1,4 +1,9 @@
 <?php
+namespace MeuProjeto\Models;
+
+use MeuProjeto\Enums\Situacao;
+use InvalidArgumentException;
+
 class PessoaFisica extends Cliente
 {
     private int $idade;
@@ -7,7 +12,7 @@ class PessoaFisica extends Cliente
     public function __construct(
         string $nome, string $email, int $idade, string $cpf)
     {
-        /* Chamamos o construtor da superclasse (Cliente) e repassamos para ele nome e email */
+    
         parent::__construct($nome, $email); 
 
         $this->setIdade($idade);
