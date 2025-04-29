@@ -10,6 +10,10 @@
     <hr>
 
 <?php
+/* Sempre que trabalharmos com namespaces, será necessário especificar através do 'use' quais classes/enums/funções serão usadas. */
+use MeuProjeto\Models\PessoaFisica;
+use MeuProjeto\Models\PessoaJuridica;
+
 require_once "src/Enums/Situacao.php"; // Enum
 require_once "src/Models/Cliente.php"; // Superclasse
 require_once "src/Models/PessoaFisica.php"; // Subclasse
